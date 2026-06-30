@@ -21,3 +21,29 @@ function type() {
 }
 
 type();
+/* ===== Photo Slider ===== */
+const photos = document.querySelectorAll(".slider .photo");
+let current = 0;
+
+setInterval(() => {
+    photos[current].classList.remove("active");
+    current = (current + 1) % photos.length;
+    photos[current].classList.add("active");
+}, 3000);
+
+/* ===== Floating Hearts ===== */
+const hearts = document.getElementById("hearts");
+
+setInterval(() => {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "💖";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (20 + Math.random() * 20) + "px";
+    hearts.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 8000);
+
+}, 500);
