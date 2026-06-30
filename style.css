@@ -63,3 +63,60 @@ button:hover{
 transform:scale(1.08);
 box-shadow:0 0 20px hotpink;
 }
+/* ===== Photo Slider ===== */
+.slider{
+position:relative;
+width:220px;
+height:220px;
+margin:20px auto;
+}
+
+.slider .photo{
+position:absolute;
+top:0;
+left:0;
+opacity:0;
+transition:1.5s;
+}
+
+.slider .photo.active{
+opacity:1;
+}
+
+/* ===== Floating Hearts ===== */
+#hearts{
+position:fixed;
+left:0;
+top:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+}
+
+.heart{
+position:absolute;
+bottom:-20px;
+font-size:22px;
+animation:fly 8s linear infinite;
+}
+
+@keyframes fly{
+0%{
+transform:translateY(0);
+opacity:1;
+}
+100%{
+transform:translateY(-110vh);
+opacity:0;
+}
+}
+
+/* Made with Love */
+.made{
+margin-top:25px;
+color:#ff4d94;
+font-weight:bold;
+font-size:18px;
+text-align:center;
+}
